@@ -2,12 +2,13 @@
 import utime
 from machine import Pin
 
-
-print("Hello World!")
-print("Hello World!")
-
+# Create a Pin object for controlling the LED
 pin = Pin("LED", Pin.OUT)
+
+# Continuously toggle the LED on and off
 while True:
-    pin.toggle()
-    utime.sleep(1)
-    
+    pin.toggle()  # Toggle the LED state (on or off)
+    utime.sleep(1)  # Pause for 1 second
+
+    # Uncomment the following line if you want to print a message each time the LED blinks
+    # print("Blinky Blinky")
