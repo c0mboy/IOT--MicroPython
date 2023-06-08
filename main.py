@@ -1,14 +1,26 @@
-# main.py -- put your code here!
+# # main.py -- put your code here!
 import utime
 from machine import Pin
+import dht
+import machine
 
 # Create a Pin object for controlling the LED
 pin = Pin("LED", Pin.OUT)
 
-# Continuously toggle the LED on and off
-while True:
-    pin.toggle()  # Toggle the LED state (on or off)
-    utime.sleep(1)  # Pause for 1 second
+# Create a DHT11 object for temperature and humidity measurement
+tempSensor = dht.DHT11(machine.Pin(27))    # DHT11 sensor connected to GPIO 27 
 
-    # Uncomment the following line if you want to print a message each time the LED blinks
-    # print("Blinky Blinky")
+while True:
+    # Measure temperature and humidity
+    tempSensor.measure()
+    temperature = tempSensor.temperature()
+    humidity = tempSensor.humidity()
+
+    # Toggle the LED state (on or off)
+    pin.toggle()
+
+    # Print temperature and humidity
+    print("Temperature is {} degrees Celsius and Humidity is {}%".format(temperature, humidity))
+
+    # Pause for 5 seconds
+    utime.sleep(5)
