@@ -1,6 +1,6 @@
 # # main.py -- put your code here!
 import utime
-from machine import Pin
+from machine import Pin, PWM
 import dht
 import machine
 
@@ -20,6 +20,11 @@ while True:
     pin.toggle()
 
     # Print temperature and humidity
+    print("LED is ON changing color")
+    pwm = PWM(pin)
+    pwm.freq(1000)
+    pwm.duty_u16(0)
+    
     print("Temperature is {} degrees Celsius and Humidity is {}%".format(temperature, humidity))
 
     # Pause for 5 seconds
