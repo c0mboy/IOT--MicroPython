@@ -2,3 +2,6 @@
 
 Project whit in 23ST-1DT305-Tillämpad Internet of Things, Introduktion-7,5 hp
 Lets start tested repo works OK!
+
+Use exten PyMakr
+Flashed and Loaded the Pico whit MicroPython

@@ -24,4 +24,4 @@ while True:
     print("Temperature is {} degrees Celsius and Humidity is {}%".format(temperature, humidity))
 
     # Pause for 5 seconds
-    utime.sleep(5)
+    utime.sleep(100)
