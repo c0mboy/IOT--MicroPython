@@ -5,3 +5,8 @@ Lets start tested repo works OK!
 
 Use exten PyMakr
 Flashed and Loaded the Pico whit MicroPython
+
+part one
+https://hackmd.io/@lnu-iot/B1T1_KM83
+
+part two
