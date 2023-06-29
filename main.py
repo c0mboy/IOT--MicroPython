@@ -47,7 +47,7 @@ while True:
         print("Temperature is {} degrees Celsius and Humidity is {}%".format(temperature, humidity))
 
         # Pause for 60 seconds
-        utime.sleep(60)
+        utime.sleep(30)
         
         # If the temperature reading dosn't give u values then it will give an error
     except OSError:

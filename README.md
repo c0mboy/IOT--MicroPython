@@ -11,14 +11,8 @@ https://hackmd.io/@lnu-iot/B1T1_KM83
 
 part two
 
-ID Azure
-0ne00A36358
+Username
+c0mboy
 
-Enhets Id
-weahter
-
-Primärnyckel
-rJM/ktU162t9CsivOA3jWISAI4HSwZ2xsIHB9LMbrFQ=
-
-Sekundärnyckel
-WImwUnjnshW/zFBcRdD8HfmhrVli+CBPNEe8ukN6wRE=
+Active Key
+aio_emLO242fsEm5wCRdEIJfwwqFkhy4
