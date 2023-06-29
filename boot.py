@@ -1,4 +1,6 @@
 # boot.py -- run on boot-up
+WIFI_SSID = 'La Familia'
+WIFI_PASS = 'kaminen25'
 
 def do_connect():
     import network
@@ -6,7 +8,7 @@ def do_connect():
     if not sta_if.isconnected():                # Check if already connected
         print('connecting to network...')
         sta_if.active(True)                     # Activate network interface
-        sta_if.connect('La Familia', 'kaminen25')     # Your WiFi Credential
+        sta_if.connect(WIFI_SSID, WIFI_PASS)     # Your WiFi Credential
         # Check if it is connected otherwise wait
         while not sta_if.isconnected():         
             pass

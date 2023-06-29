@@ -24,7 +24,6 @@ def http_get(url = 'http://detectportal.firefox.com/'):
 http_get()
 
 
-
 # Create a Pin object for controlling the LED
 pin = Pin("LED", Pin.OUT)
 
@@ -45,6 +44,7 @@ while True:
 
         # Print the values to the serial console
         print("Temperature is {} degrees Celsius and Humidity is {}%".format(temperature, humidity))
+
 
         # Pause for 60 seconds
         utime.sleep(30)
