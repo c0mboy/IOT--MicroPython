@@ -44,6 +44,7 @@ def send_temp():
         print("FAILED", e)
     time.sleep(600) # 10 minutes delay
 
+
 # Try WiFi Connection
 try:
     ip = wifiConnection.connect()
@@ -51,6 +52,23 @@ try:
 except KeyboardInterrupt:
     print("Keyboard interrupt")
     
+# Check internet connection
+# def http_get(url = 'http://detectportal.firefox.com/'):
+#     import socket                           # Used by HTML get request
+#     import time                             # Used for delay
+#     _, _, host, path = url.split('/', 3)    # Separate URL request
+#     addr = socket.getaddrinfo(host, 80)[0][-1]  # Get IP address of host
+#     s = socket.socket()                     # Initialise the socket
+#     s.connect(addr)                         # Try connecting to host address
+#     # Send HTTP request to the host with specific path
+#     s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))    
+#     time.sleep(1)                           # Sleep for a second
+#     rec_bytes = s.recv(10000)               # Receve response
+#     print(rec_bytes)                        # Print the response
+#     s.close()                               # Close connection
+# http_get()
+
+
 # Use the MQTT protocol to connect to Adafruit IO
 client = MQTTClient(keys.AIO_CLIENT_ID, keys.AIO_SERVER, keys.AIO_PORT, keys.AIO_USER, keys.AIO_KEY)
 
