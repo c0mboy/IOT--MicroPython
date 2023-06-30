@@ -65,14 +65,14 @@ print("Connected to %s, subscribed to %s topic" % (keys.AIO_SERVER, keys.AIO_TEM
 print("Connected to %s, subscribed to %s topic" % (keys.AIO_SERVER, keys.AIO_MES_FEED))
 
 
-try:                      # Code between try: and finally: may cause an error
-    tempSensor = dht.DHT11(machine.Pin(27))   # DHT11 sensor connected to GPIO 27                     
+try:                      # Code between try: and finally: may cause an error                   
                           # so ensure the client disconnects the server if
                           # that happens.
-    while 1:              # Repeat this loop forever
+    while 1:              # Repeat this loop forever#
         client.check_msg()# Action a message if one is received. Non-blocking.
                           # Send a random number to Adafruit IO if it's time.
         send_temp()
+        
 finally:                  # If an exception is thrown ...
     client.disconnect()   # ... disconnect the client and clean up.
     client = None
